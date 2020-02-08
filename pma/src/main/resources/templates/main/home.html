@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts:: header"></head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<body>
+
+<nav th:replace="layouts:: navbar"></nav>
+
+<div class="container">
+    <h4>Current Employees</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <table th:replace="/employees/list-employees::list-employees"></table>
+        </div>
+        <div class="col-md-4">
+            <canvas id="myChart" width="50" height="50"></canvas>
+        </div>
+    </div>
+
+    <h4>Current Projects</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <table th:replace="/projects/list-projects::list-projects"></table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" th:src="@{js/myChart.js}"></script>
+</body>
+</html>
