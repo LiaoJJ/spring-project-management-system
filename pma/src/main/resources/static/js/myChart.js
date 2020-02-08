@@ -1,11 +1,20 @@
+var chartDataStr = decodeHtml(chartData);
+var chartJson = JSON.parse(chartDataStr);
+var labelData = [];
+var numericData=[];
+for(var i=0; i<chartJson.length; i++){
+    numericData[i] = chartJson[i].stageCount;
+    labelData[i] = chartJson[i].stageName;
+}
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: labelData,
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: numericData,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -26,12 +35,15 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+        title:{
+            display:true,
+            text:"Project Status"
         }
     }
 });
+
+function decodeHtml(html){
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}

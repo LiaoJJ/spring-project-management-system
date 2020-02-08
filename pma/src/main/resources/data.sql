@@ -14,6 +14,13 @@ insert into project (project_id, name, stage, description) values (1000, 'Large 
 insert into project (project_id, name, stage, description) values (1001, 'New Employee Budget',  'COMPLETED', 'Decide on a new employee bonus budget for the year and figureout who will be promoted');
 insert into project (project_id, name, stage, description) values (1002, 'Office Reconstruction', 'INPROGRESS', 'The office building in Monroe has been damaged due to hurricane in the region. This needs to be reconstructed');
 insert into project (project_id, name, stage, description) values (1003, 'Improve Intranet Security', 'INPROGRESS', 'With the recent data hack, the office security needs to be improved and proper security team needs to be hired for implementation');
+insert into project (project_id, name, stage, description) values (1004, 'Project1', 'NOTSTARTED', 'hahaha');
+insert into project (project_id, name, stage, description) values (1005, 'Project2', 'NOTSTARTED', 'hahaha');
+insert into project (project_id, name, stage, description) values (1006, 'Project3', 'COMPLETED', 'hahaha');
+insert into project (project_id, name, stage, description) values (1007, 'Project4', 'COMPLETED', 'hahaha');
+
+
+
 
 -- INSERT PROJECT_EMPLOYEE_RELATION (Removed duplicates from video)
 insert into project_employee (employee_id, project_id) values (1,1000);

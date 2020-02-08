@@ -16,14 +16,34 @@
         </div>
         <div class="col-md-4">
             <canvas id="myChart" width="50" height="50"></canvas>
+
+            <script>
+                var chartData = "[[${projectStatusCnt}]]"
+            </script>
         </div>
     </div>
 
     <h4>Current Projects</h4>
     <div class="row">
         <div class="col-md-6">
-            <table th:replace="/employees/list-employees::list-employees"></table>
-        </div>
+            <table  class="table table-striped">
+                <thead>
+                <tr>
+                    <!--            <th scope="col">Employee Id</th>-->
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Project Count</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="aEmployeesProjectCnt: ${employeesProjectCnt}">
+                    <!--            <th scope="row" th:text="${aEmployee.employeeId}"></th>-->
+                    <td th:text="${aEmployeesProjectCnt.firstName}"></td>
+                    <td th:text="${aEmployeesProjectCnt.lastName}"></td>
+                    <td th:text="${aEmployeesProjectCnt.projectCount}"></td>
+                </tr>
+                </tbody>
+            </table>        </div>
     </div>
 </div>
 
