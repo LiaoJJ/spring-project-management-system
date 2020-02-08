@@ -8,7 +8,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long projectID;
+    private long projectId;
 
     private String name;
     private String stage; // NOSTAGED, COMPLETED, INPROGRESS
@@ -40,11 +40,11 @@ public class Project {
     }
 
     public long getProjectID() {
-        return projectID;
+        return projectId;
     }
 
     public void setProjectID(long projectID) {
-        this.projectID = projectID;
+        this.projectId = projectID;
     }
 
     public String getName() {

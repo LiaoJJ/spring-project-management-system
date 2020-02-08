@@ -10,7 +10,7 @@
     <table th:fragment="list-employees" class="table table-striped">
         <thead>
         <tr>
-            <th scope="col">Employee Id</th>
+<!--            <th scope="col">Employee Id</th>-->
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
@@ -18,7 +18,7 @@
         </thead>
         <tbody>
         <tr th:each="aEmployee: ${employees}">
-            <th scope="row" th:text="${aEmployee.employeeId}"></th>
+<!--            <th scope="row" th:text="${aEmployee.employeeId}"></th>-->
             <td th:text="${aEmployee.firstName}"></td>
             <td th:text="${aEmployee.lastName}"></td>
             <td th:text="${aEmployee.email}"></td>

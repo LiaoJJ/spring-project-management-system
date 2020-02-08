@@ -10,18 +10,18 @@
     <table th:fragment="list-projects" class="table table-bordered table-striped">
         <thead>
         <tr>
-            <th scope="col">Project ID</th>
+<!--            <th scope="col">Project ID</th>-->
             <th scope="col">Project Name</th>
             <th scope="col">Stage</th>
-            <th scope="col">Description</th>
+<!--            <th scope="col">Description</th>-->
         </tr>
         </thead>
         <tbody>
         <tr th:each="aProject: ${projects}">
-            <th scope="row" th:text="${aProject.projectID}"></th>
+<!--            <th scope="row" th:text="${aProject.projectId}"></th>-->
             <td th:text="${aProject.name}"></td>
             <td th:text="${aProject.stage}"></td>
-            <td th:text="${aProject.description}"></td>
+<!--            <td th:text="${aProject.description}"></td>-->
         </tr>
         </tbody>
     </table>

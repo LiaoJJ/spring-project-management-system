@@ -7,10 +7,12 @@
 <nav th:replace="layouts:: navbar"></nav>
 
 <div class="container">
+    <h3>Main Dashboard</h3>
+    <hr>
     <h4>Current Employees</h4>
     <div class="row">
         <div class="col-md-6">
-            <table th:replace="/employees/list-employees::list-employees"></table>
+            <table th:replace="/projects/list-projects::list-projects"></table>
         </div>
         <div class="col-md-4">
             <canvas id="myChart" width="50" height="50"></canvas>
@@ -20,7 +22,7 @@
     <h4>Current Projects</h4>
     <div class="row">
         <div class="col-md-6">
-            <table th:replace="/projects/list-projects::list-projects"></table>
+            <table th:replace="/employees/list-employees::list-employees"></table>
         </div>
     </div>
 </div>
