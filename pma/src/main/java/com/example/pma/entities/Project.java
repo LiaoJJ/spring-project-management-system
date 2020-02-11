@@ -8,6 +8,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+//    @SequenceGenerator(name = "project_generator",sequenceName = "project_seq", allocationSize = 1)
     private long projectId;
 
     private String name;
